@@ -1,0 +1,12 @@
+#!/bin/bash
+# twitter bot
+
+# Stop on errors
+# See https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
+-Eeuo pipefail
+set -x
+
+# Style checking
+pycodestlye twitter_bot
+pydocstyle twitter_bot
+pylint --disable=cyclic-import twitter_bot

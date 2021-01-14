@@ -1,0 +1,15 @@
+#!/bin/bash
+# twitter bot
+
+# Stop on errors
+# See https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
+-Eeuo pipefail
+set -x
+
+# Set environment variables
+export FLASK_DEBUG=True
+export FLASK_APP=twitter_bot
+export TWITTER_BOT_SETTINGS=config.py
+
+# Run server on port 8000
+flask run --host 0.0.0.0 --port 8000
