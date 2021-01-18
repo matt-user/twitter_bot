@@ -28,3 +28,6 @@ venv3/
 # Google Drive and Dropbox
 Icon
 .dropbox*
+
+# Hide Credentials
+secret.py
